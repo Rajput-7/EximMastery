@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>આંતરરાષ્ટ્રીય વ્યાપાર: એક્સપોર્ટ ગાઇડ</title>
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --text-white: #ffffff;
+            --accent-light: #58d68d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--text-white);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-color: #000; /* Base color while images load */
+        }
+
+        /* Animated Blur Background */
+        #bg-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .bg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            filter: blur(20px) brightness(0.7); /* Permanent base blur */
+            transition: opacity 1.5s ease-in-out, filter 1.5s ease-in-out;
+        }
+
+        .bg-layer.active {
+            opacity: 1;
+            filter: blur(8px) brightness(0.6); /* Reduced blur when active */
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Liquid Glass Card Effect */
+        .step-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .step-card:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        h2 {
+            color: var(--accent-light);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-light);
+        }
+
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        footer {
+            background: rgba(0,0,0.3);
+			border-top: 1px solid var(--border);
+			padding: 20px;
+			text-align: 0.9rem;
+			font-size: 0.9rem;
+			color: #94a3b8;
+			margin-top: auto;          
+            opacity: 0.8;
+        }
+		
+		.footer-links {
+		color: var(--accent-light);
+		text-decoration: none;
+		margin: 0 15px;
+		transition: 0.3s;
+		}
+		
+		.footer-links a:hover {
+		text-decoration: underline:
+		}
+		
+		
+    </style>
+</head>
+<body>
+
+<div id="bg-wrapper">
+    <div id="layer1" class="bg-layer active" style="background-image: url('image_1.jpg');"></div>
+    <div id="layer2" class="bg-layer" style="background-image: url('image_2.jpg');"></div>
+</div>
+
+<header>
+    <h1>આંતરરાષ્ટ્રીય વ્યાપાર: એક્સપોર્ટ ગાઇડ</h1>
+    <p>Step-by-Step ગુજરાતી માર્ગદર્શિકા</p>
+</header>
+
+<div class="container">
+    <div class="step-card">
+        <h2>Step 1: કંપની સ્થાપના અને કાયદાકીય નોંધણી</h2>
+        <ul>
+            <li><strong>Udyam (MSME):</strong> ગવર્મેન્ટ સબસિડી અને લોન માટે MSME પોર્ટલ પર નોંધણી.</li>
+            <li><strong>PAN / Tax Entity:</strong> PAN (Permanent Account Number) અનિવાર્ય છે. IEC, Udyam અને GST માટે PAN જરૂરી છે.</li>
+            <li><strong>AD Code (Authorized Dealer Code):</strong> બેંક દ્વારા આપવામાં આવતો 14-અંકનો યુનિક કોડ, જે કસ્ટમ્સ ક્લિયરન્સ માટે જરૂરી છે.</li>
+            <li><strong>IEC (Import Export Code):</strong> DGFTમાંથી IEC મેળવવું ફરજિયાત છે. IEC વગર કાયદેસર આયાત/નિકાસ શક્ય નથી. IEC માટે જરૂરી દસ્તાવેજો: <strong> પાસપોર્ટ સાઇઝ ફોટો, PAN, સરનામું પુરાવો, અને Cancelled Cheque.</strong> IEC માટે રિન્યુઅલની જરૂર નથી. </li>
+            <li><strong>DSC (Digital Signature Certificate):</strong> DGFT અને ICE GATE પર ઓનલાઈન ફાઈલિંગ માટે Class 3 DSC જરૂરી છે.</li>
+			<li><strong>RCMC (Registration Cum Membership Certificate):</strong> સંબંધિત એક્સપોર્ટ પ્રમોશન કાઉન્સિલ (ઉદાહરણ: ટેક્સટાઇલ માટે AEPC, કેમિકલ માટે CHEMEXCIL, Spice માટે Spice Board) ની સદસ્યતા.
+				<ul class="sub-list">
+				<li>i) IEC બાદ તમારા ઉદ્યોગ અનુસાર Export Promotion Council માં RCMC મેળવવો. તેનાથી સરકારી લાભ અને સબસિડી મળે છે.</li></li>
+				</ul>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h2>Step 2: બજાર સંશોધન (Market Research)</h2>
+        <ul>
+            <li><strong>HS Code:</strong> તમારા ઉત્પાદન માટેનો 8-અંકનો HS Code શોધો, તે DGFT અથવા Export Data Bank પરથી 8-અંકનો HS Code માલસે.</li>
+            <li><strong>Target Market:</strong> DGFT અથવા ટ્રેડ ડેટા દ્વારા નક્કી કરો કે તમારા માલની માંગ કયા દેશમાં સૌથી વધુ છે.</li>
+            <li><strong>Buyer Selection:</strong> Indian Embassy અથવા B2B પ્લેટફોર્મ (Alibaba, IndiaMart) દ્વારા વેરિફાઈડ આયાતકારો શોધો.</li>
+			<li><strong>Compliance:</strong> લક્ષિત દેશના નિયમો (Halal, FDA, CE અથવા ISO સર્ટિફિકેશન) તપાસી લો.</li>
+			<li><strong>Export Promotion:</strong> ટ્રેડ ફેર, Government Export Initiatives અને Export Council Events નો ઉપયોગ કરો.</li>
+			<li><strong>Country Requirements:</strong> ટદરેક દેશના નિયમો જાણો (જેમ કે Halal, FDA, CE, Phytosanitary).</li>
+			<li><strong>Credit Risk Management:</strong> શરૂઆતમાં L/C અથવા Advance Payment (જેમ કે 30%) પસંદ કરો.</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h2>Step 3: ખર્ચ ગણતરી અને ઇન્કોટર્મ્સ (Costing & Incoterms)</h2>
+        <ul>
+			<li><strong>કિંમત નક્કી કરતી વખતે નીચેના ખર્ચ ગણો:</strong></li>
+            <li><strong>Ex-Works:</strong> ઉત્પાદન અને પેકિંગ ખર્ચ.</li>
+			<li><strong>Inland Logistics:</strong> ફેક્ટરીથી પોર્ટ સુધીનો ટ્રાન્સપોર્ટ ખર્ચ.</li>
+			<li><strong>CHA & Terminal Charges:</strong> કસ્ટમ્સ એજન્ટની ફી અને પોર્ટ હેન્ડલિંગ ચાર્જ.</li>
+			<li><strong>Freight:</strong> સમુદ્રી (Ocean) અથવા હવાઈ (Air) નૂર ખર્ચ. (FOB, CIF, EXW, CFR, DAP મુજબ).</li>
+			<li><strong>Insurance:</strong> માલના રક્ષણ માટે મરીન ઇન્શ્યોરન્સ (સામાન્ય રીતે 0.1% થી 0.5%).</li>
+			<li><strong>Bank Charges:</strong> L/C અને ફોરેક્સ ચાર્જીસ.</li>
+			<li><strong>Profit Margin:</strong> કુલ ખર્ચ પર <span class="highlight">5-10%</span> નફો રાખો.</li>
+            <li><strong>Contingency:</strong> અચાનક ખર્ચ માટે થોડો વધારાનો બફર રાખો.</li>
+			
+        </ul>
+    </div>
+
+	<div class="step-card">
+        <h2>Step 4: વેચાણ કરાર અને પેમેન્ટ સુરક્ષા</h2>
+        <ul>
+            <li><strong>Proforma Invoice:</strong> તેમાં પ્રોડક્ટ વિગત, જથ્થો, કિંમત, Incoterms,પેમેન્ટની શરતો અને ડિલિવરીનો સમય સ્પષ્ટ હોય.</li>
+			<li><strong>Quality & Certification:</strong> ISI/BIS, Oeko-Tex, GOTS, REACH વગેરે જરૂરી પ્રમાણપત્ર મેળવો.</li>
+			<li><strong>Letter of Credit (L/C):</strong> પેમેન્ટ સુરક્ષિત કરવા માટે બેંક દ્વારા આપવામાં આવતી ખાતરી.</li>
+			<li><strong>Negotiation:</strong> ક્વોલિટી પેરામીટર્સ અને પેકેજિંગની વિગતો લેખિતમાં નક્કી કરવી.</li>
+			
+			
+        </ul>
+    </div>
+	
+	<div class="step-card">
+        <h2>Step 5: શિપમેન્ટ અને કસ્ટમ્સ પ્રક્રિયા (Shipment Execution)</h2>
+        <ul>
+            <li><strong>1.	Production & Packing:</strong> માલ પર "Made in India", બેચ નંબર અને પોર્ટની વિગતો લખવી.</li>
+            <li><strong>2.	Booking:</strong> ફ્રેટ ફોરવર્ડર દ્વારા કન્ટેનર બુક કરવું.</li>
+			<li><strong>3.	Shipment Booking:</strong> Freight Forwarder અથવા CHA મારફતે Shipping Line (Maersk, MSC વગેરે) સાથે બુકિંગ કરો.</li>
+			<li><strong>4.	Customs Inspection/Clearance:</strong> કસ્ટમ્સ અધિકારી દ્વારા માલની તપાસ.
+			<ul class="sub-list">
+				<li><strong>a)</strong>  Shipping Bill ફાઈલ કરો</li>
+				<li><strong>b)</strong>  દસ્તાવેજ: Invoice, Packing List, IEC, AD Code</li>
+				<li><strong>c)</strong>  Customs Inspection પછી LEO (Let Export Order) મળે</li></li>
+			</ul>
+			<li><strong>5.	Let Export Order (LEO):</strong> તપાસ બાદ મળતી નિકાસની સત્તાવાર પરવાનગી.</li>
+			<li><strong>6.	Bill of Lading (B/L):</strong> Shipping Line દ્વારા અપાતો માલિકીનો દસ્તાવેજ.</li>
+			<li><strong>7.	Bank Documentation:</strong> Shipping Bill, Invoice, Packing List અને B/L બેંકમાં સબમિટ કરો.</li>
+			<li><strong></strong></li>
+			<li><strong></strong></li>
+			
+		</ul>
+    </div>
+	
+	<div class="step-card">
+        <h2>Step 6: નિકાસ પછીની પ્રક્રિયા (Post-Export)</h2>
+        <ul>
+            <li><strong>e-BRC:</strong> વિદેશી ચલણ બેંકમાં જમા થયાનું પ્રમાણપત્ર. / બેંક દ્વારા મળતો Payment Proof.</li>
+			<li><strong>Government Incentives:</strong> RoDTEP અને Duty Drawback જેવી યોજનાઓ દ્વારા ટેક્સ રિફંડ મેળવવું.</li>
+			<li><strong>Document Submission:</strong> ઓરિજિનલ દસ્તાવેજો બેંક દ્વારા ખરીદદારને મોકલવા. (Original B/L, Invoice, Packing List, etc.)</li>
+			<li><strong>Payment Realisation:</strong> વિદેશી ચલણ પ્રાપ્ત કરો.</li>
+			<li><strong>Compliance:</strong> RBI/FEMA મુજબ સમયસર પેમેન્ટ ચકાસો.</li>
+        </ul>
+    </div>
+	
+</div>
+
+<footer>
+    <p>&copy; 2026 એક્સપોર્ટ ગાઇડ - By Ronaksinh</p>
+	<div class="footer-links">
+		<a href="#">Privacy Policy</a>
+		<a href="#">Terms of Service<a/>
+		<a href="mailto:ronakrajput502@gmail.com">Contact Support</a>
+	</div>
+	<p>&copy; 2026 Export Guide / Crafted with ❤️ by <strong>Ronaksinh</strong></p>
+	<p style="font-size: 0.7rem;margin-top: 5px; ">Compliance: RBI/FEMA & Government of India Export Guidelines</p>
+</footer>
+
+<script>
+    const layer1 = document.getElementById('layer1');
+    const layer2 = document.getElementById('layer2');
+    let showingFirst = true;
+
+    function swapBackgrounds() {
+        if (showingFirst) {
+            layer1.classList.remove('active');
+            layer2.classList.add('active');
+        } else {
+            layer2.classList.remove('active');
+            layer1.classList.add('active');
+        }
+        showingFirst = !showingFirst;
+    }
+
+    // Har 5 second ma blur animation sathe change thase
+    setInterval(swapBackgrounds, 5000);
+</script>
+//new Code
+
+<div class="dock-container">
+    <div class="dock">
+        <a href="https://github.com/Rajput-7" target="_blank" class="dock-item" title="GitHub">
+            <img src="github.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/ronaksinh-rajput-484158250" target="_blank" class="dock-item" title="LinkedIn">
+            <img src="linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:ronakrajput502@gmail.com" class="dock-item" title="Mail">
+            <img src="mail.png" alt="Mail">
+        </a>
+        <a href="https://wa.me/919913721247" target="_blank" class="dock-item" title="WhatsApp">
+            <img src="whatsapp.png" alt="WhatsApp">
+        </a>
+        
+        <div class="dock-item" id="web-launcher" title="My Projects">
+            <img src="website.png" alt="Websites">
+            
+            <div class="sub-dock" id="sub-dock">
+                <a href="https://ronak-cv.netlify.app/" target="_blank" title="CV Website">
+                    <img src="cv.png" alt="CV">
+                </a>
+                <a href="https://www.credly.com/users/ronaksinh" target="_blank" title="Certificates">
+                    <img src="Certificate.png" alt="Certificates">
+                </a>
+                
+                
+                
+                <a href="https://rajput-7.github.io/Make-Passport-Size-Photo/" target="_blank" title="Passport Tool">
+                    <img src="photo-icon.png" alt="Photo Tool">
+                </a>
+                <a href="#" title="Export Book (Coming Soon)">
+                    <img src="Export-icon.png" alt="Book">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Dock Styling */
+    .dock-container {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+    }
+
+    .dock {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .dock-item {
+        margin: 0 10px;
+        cursor: pointer;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+    }
+
+    .dock-item img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+    .dock-item:hover {
+        transform: scale(1.4) translateY(-10px);
+    }
+
+    /* Sub-menu Styling */
+    .sub-dock {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        border-radius: 15px;
+        display: flex;
+        gap: 15px;
+        transition: 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .sub-dock img { width: 35px; height: 35px; }
+
+    /* Show Sub-menu on Click/Hover */
+    .dock-item:hover .sub-dock {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+</style>
+
+</body>
+</html>
